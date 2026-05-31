@@ -1,12 +1,19 @@
 {
-  "gitSyncId": "6a1b8de3ea2d016db25069a5_d7582d07-7b45-4bbd-abb2-2bde0c4112be",
-  "id": "Page1_app.init",
+  "gitSyncId": "6a1b8de3ea2d016db25069a5_c650202c-38a0-4e71-9c4c-849ef4ab7071",
+  "id": "Page1_app.updateTodo",
   "pluginId": "js-plugin",
   "pluginType": "JS",
   "unpublishedAction": {
     "actionConfiguration": {
       "encodeParamsToggle": true,
-      "jsArguments": [],
+      "jsArguments": [
+        {
+          "name": "id"
+        },
+        {
+          "name": "update"
+        }
+      ],
       "paginationType": "NONE",
       "timeoutInMillisecond": 10000
     },
@@ -22,10 +29,10 @@
         "key": "body"
       }
     ],
-    "fullyQualifiedName": "app.init",
-    "name": "init",
+    "fullyQualifiedName": "app.updateTodo",
+    "name": "updateTodo",
     "pageId": "Page1",
-    "runBehaviour": "ON_PAGE_LOAD",
-    "userSetOnLoad": true
+    "runBehaviour": "MANUAL",
+    "userSetOnLoad": false
   }
 }
