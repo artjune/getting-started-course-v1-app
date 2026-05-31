@@ -1,5 +1,6 @@
 export default {
 	todos: [],
+	activeTodo: -1,
 	dummyTodos: [
 		{title: 'use the input to add a todo', completed: true},
 		{title: 'hit enter to submit', completed: false},

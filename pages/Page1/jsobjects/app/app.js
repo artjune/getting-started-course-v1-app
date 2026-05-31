@@ -7,5 +7,16 @@ export default {
 	},
 	addTodo (title) {
 		this.updateTodo (data. todos. length, {title, completed: false}) ;
+	},
+	deleteTodo (id) {
+		data.todos.splice(id, 1);
+	},
+	setActiveTodo(id) {
+		console.log("setActiveTodo");
+		data.activeTodo = id;
+	},
+	editTodo (id, title) {
+		this.updateTodo(id, {title});
+		data.activeTodo = -1;
 	}
 }

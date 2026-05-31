@@ -14,6 +14,7 @@
       "detachFromLayout": true,
       "displayName": "Canvas",
       "dynamicBindingPathList": [],
+      "dynamicTriggerPathList": [],
       "flexLayers": [],
       "hideCard": true,
       "isDeprecated": false,
@@ -36,7 +37,7 @@
       "rightColumn": 154.18359375,
       "shouldScrollContents": false,
       "tabId": "tab1",
-      "tabName": "Tab 1",
+      "tabName": "view",
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -49,6 +50,7 @@
       "detachFromLayout": true,
       "displayName": "Canvas",
       "dynamicBindingPathList": [],
+      "dynamicTriggerPathList": [],
       "flexLayers": [],
       "hideCard": true,
       "isDeprecated": false,
@@ -71,7 +73,7 @@
       "rightColumn": 154.18359375,
       "shouldScrollContents": false,
       "tabId": "tab2",
-      "tabName": "Tab 2",
+      "tabName": "edit",
       "topRow": 0,
       "type": "CANVAS_WIDGET",
       "version": 1,
@@ -79,7 +81,7 @@
       "widgetName": "Canvas3"
     }
   ],
-  "defaultTab": "Tab 1",
+  "defaultTab": "{{data.activeTodo == -1? 'view': 'edit'}}",
   "displayName": "Tabs",
   "dynamicBindingPathList": [
     {
@@ -90,9 +92,22 @@
     },
     {
       "key": "boxShadow"
+    },
+    {
+      "key": "defaultTab"
     }
   ],
   "dynamicHeight": "AUTO_HEIGHT",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onTabSelected"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onTabSelected"
+    }
+  ],
   "hideCard": false,
   "iconSVG": "https://appcdn.appsmith.com/static/media/icon.9e3d67c0af9c0bd092dc56240314e18a.svg",
   "isCanvas": true,
@@ -108,6 +123,7 @@
   "mobileLeftColumn": 1,
   "mobileRightColumn": 25,
   "mobileTopRow": 2,
+  "onTabSelected": "{{data.activeTodo = -1}}",
   "originalBottomRow": 70,
   "originalTopRow": 9,
   "parentColumnSpace": 6.42431640625,
@@ -123,7 +139,7 @@
       "id": "tab1",
       "index": 0,
       "isVisible": true,
-      "label": "Tab 1",
+      "label": "view",
       "positioning": "vertical",
       "widgetId": "7ehlstw718"
     },
@@ -131,7 +147,7 @@
       "id": "tab2",
       "index": 1,
       "isVisible": true,
-      "label": "Tab 2",
+      "label": "edit",
       "positioning": "vertical",
       "widgetId": "yv17s5on03"
     }
